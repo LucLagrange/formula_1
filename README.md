@@ -1,1 +1,1 @@
-# formula_1
+This project aims to provide insights about formula one ! 
