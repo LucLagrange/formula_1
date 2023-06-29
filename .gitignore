@@ -1,4 +1,12 @@
-
+dbt-env
 target/
 dbt_packages/
 logs/
+.idea
+.user.yml
+dbt-env/
+target/
+dbt_packages/
+dbt-env/
+logs/
+scripts/
