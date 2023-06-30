@@ -1,10 +1,15 @@
-select
-    cast(circuitid as string) as id_circuit,
-    circuitref as circuit_reference,
-    name as circuit_name,
-    location as circuit_location,
-    country as circuit_country,
-    lat as lattitude,
-    lng as longitude,
-    alt as altitude
-from `formula-1-391319.Formula1.circuits`
+{{ config(
+    materialized='table',
+    cluster_by = "id_circuit",
+) }}
+
+SELECT
+    cast(circuitid AS string) AS id_circuit
+    , circuitref AS circuit_reference
+    , name AS circuit_name
+    , location AS circuit_location
+    , country AS circuit_country
+    , lat AS lattitude
+    , lng AS longitude
+    , alt AS altitude
+FROM `formula-1-391319.Formula1.circuits`
