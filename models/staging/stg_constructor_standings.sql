@@ -1,6 +1,6 @@
 {{ config(
     materialized='table',
-    cluster_by = "id_circuit",
+    cluster_by = "id_constructor_standings",
 ) }}
 
 SELECT
