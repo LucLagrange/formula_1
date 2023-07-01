@@ -11,5 +11,5 @@ SELECT
     , country AS circuit_country
     , lat AS lattitude
     , lng AS longitude
-    , alt AS altitude
+    , CASE WHEN alt LIKE '%N' THEN NULL ELSE alt END AS altitude
 FROM `formula-1-391319.Formula1.circuits`

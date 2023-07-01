@@ -6,7 +6,7 @@
 SELECT
     cast(driverid AS string) AS id_driver
     , driverref AS driver_reference
-    , number AS driver_number
+    , CASE WHEN number LIKE '%N' THEN NULL ELSE number END AS car_number
     , forename AS first_name
     , surname AS last_name
     , nationality

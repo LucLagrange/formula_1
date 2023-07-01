@@ -10,9 +10,9 @@ SELECT
     , positionorder AS final_rank
     , points AS points_gained
     , laps AS laps_driven
-    , fastestlap AS fastest_lap
-    , fastestlaptime AS fastest_lap_time
-    , milliseconds AS total_milliseconds_elapsed
+    , CASE WHEN fastestlap LIKE '%N' THEN NULL ELSE fastestlap END AS fastest_lap
+    , CASE WHEN fastestlaptime LIKE '%N' THEN NULL ELSE fastestlaptime END AS fastest_lap_time
+    , CASE WHEN milliseconds LIKE '%N' THEN NULL ELSE milliseconds END AS total_milliseconds_elapsed
     , CAST(resultid AS STRING) AS id_result
     , CAST(raceid AS STRING) AS id_race
     , CAST(driverid AS STRING) AS id_driver
