@@ -9,7 +9,7 @@ sources:
         description: "Contains information about the different circuits used"
       - name: stg_constructor_results
         description: "Describes the result obtained by each constructor at each race"
-      
+
       - name: stg_constructor_standings
         description: "Describes the standings for each constructos at each race"
 
@@ -39,3 +39,9 @@ sources:
 
       - name: stg_status
         description: "Contains information about each status (reasons why a drive did not finish its race)"
+
+      - name: stg_pit_stops
+        description: "Contains information about each pit stop for each race"
+
+      - name: stg_qualifying
+        description: "Contains information about each qualifying session"
