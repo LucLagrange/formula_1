@@ -1,11 +1,12 @@
 version: 2
 
 models:
-  - name: stg_circuit
+  - name: stg_circuits
     columns:
       - name: id_circuit
         description: "Circuit ID as string"
         tests:
+          - unique
           - not_null
       - name: circuit_reference
         description: "Circuit reference"
@@ -35,5 +36,5 @@ models:
         description: "Altitude"
         tests:
           - dbt_utils.not_accepted_values:
-              values: ['\N']
+              values: ['%N']
 

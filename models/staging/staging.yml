@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: staging
-    description: "This is a replica -minus some columns- of the source CSV files"
+    description: "This is a replica -minus some useless columns- of the source CSV files"
 
     tables:
       - name: stg_circuits
