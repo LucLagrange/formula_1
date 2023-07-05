@@ -20,6 +20,6 @@ jobs:
           dbt-profile-path: './'
           dbt-target: 'github_actions'
           model-records-to-write: "all"
-          notion-database-name: 'dbt Models'
-          notion-parent-id: '5e4031b4b20c4b4fad65b85f4d60e75b'
-          notion-token: '${{ secret_UgpWisgqfBmHRQY54ItJifiZGm5kqdieLihnxq2AM5A }}'
+          notion-database-name: 'Formula_1_tables'
+          notion-parent-id: 'bc4702caead541f9a92a20e09da91c2d'
+          notion-token: '${{ secrets.NOTION_INTEGRATION}}'
