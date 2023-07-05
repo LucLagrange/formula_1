@@ -1,13 +1,9 @@
-# example profiles.yml file
 Luc:
-  target: prod
+  target: dev
   outputs:
-    prod:
-      type: mysql
-      host: localhost
-      user: Luc
-      password: <password>
-      port: 5432
-      dbname: formula_1
-      schema: dbt_luc
-      threads: 4
+    dev:
+      type: bigquery
+      method: service-account
+      project: formula1
+      threads: 1
+      timeout_seconds: 300
