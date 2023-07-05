@@ -1,7 +1,9 @@
-  Luc:
-    type: bigquery
-    threads: 4
-    timeout_seconds: 1800
-    location: EU
-    retries: 1
-    priority: interactive
+Luc:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: formula1
+      threads: 1
+      timeout_seconds: 300
