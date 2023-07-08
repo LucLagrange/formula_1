@@ -1,0 +1,55 @@
+version: 2
+
+sources:
+  - name: stg_driver
+  - name: stg_results
+  - name: stg_races
+  - name: stg_qualifying
+
+models:
+  - name: dim_drivers
+    description: |
+      Generate statistics for each driver.
+    columns:
+      - name: id_driver
+        description: The unique identifier of the driver.
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_drivers')
+              field: id_driver
+      - name: nationality
+        description: The nationality of the driver.
+      - name: birth_date
+        description: The birth date of the driver.
+      - name: debut_year
+        description: The first year the driver participated.
+      - name: last_year
+        description: The last year the driver participated.
+      - name: nb_seasons_raced
+        description: The number of seasons raced.
+        tests:
+          - not_null
+      - name: driver_name
+        description: The full name of the driver.
+      - name: win
+        description: The number of wins.
+        tests:
+          - not_null
+      - name: podium
+        description: The number of podium finishes.
+        tests: 
+          - not_null
+      - name: total_points
+        description: The total points gained.
+        tests:
+          - not_null
+      - name: gp_finish
+        description: The number of Grand Prix finishes.
+        tests:
+          - not_null
+      - name: pole_position
+        description: The number of pole positions.
+        tests:
+          - not_null
