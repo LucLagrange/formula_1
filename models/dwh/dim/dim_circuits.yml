@@ -1,0 +1,36 @@
+version: 2
+
+sources:
+  - name: stg_circuits
+
+models:
+  - name: dim_circuits
+    description: |
+      Generate statistics for each circuit.
+    columns:
+      - name: id_circuit
+        description: The unique identifier of the circuit.
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_circuits')
+              field: id_circuit
+      - name: circuit_name
+        description: The name of the circuit.
+      - name: circuit_location
+        description: The location of the circuit.
+      - name: circuit_country
+        description: The country of the circuit.
+      - name: nb_races
+        description: The number of races held at the circuit.
+        tests:
+          - not_null
+      - name: oldest_race_year
+        description: The year of the oldest race held at the circuit.
+      - name: latest_race_year
+        description: The year of the latest race held at the circuit.
+      - name: nb_years_on_calendar
+        description: The number of years the circuit has been on the calendar.
+      - name: last_winner
+        description: The last driver to have won at this circuit
