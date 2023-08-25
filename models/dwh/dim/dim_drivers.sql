@@ -57,7 +57,7 @@ year AS (
         id_driver
         , COUNT(*) AS pole_position
     FROM
-        {{ ref('stg_qualifying') }}
+        {{ ref('stg_qualifyings') }}
     WHERE
         final_position = 1
     GROUP BY 1

@@ -1,47 +1,47 @@
 version: 2
 
 sources:
-  - name: staging
+  - name: Formula1
+    database: formula-1-391319
     description: "This is a replica -minus some useless columns- of the source CSV files"
-
     tables:
-      - name: stg_circuits
+      - name: circuits
         description: "Contains information about the different circuits used"
-      - name: stg_constructor_results
+      - name: constructor_results
         description: "Describes the result obtained by each constructor at each race"
 
-      - name: stg_constructor_standings
+      - name: constructor_standings
         description: "Describes the standings for each constructos at each race"
 
-      - name: stg_constructor
+      - name: constructors
         description: "Contains information about each constructor"
 
-      - name: stg_driver_standings
+      - name: driver_standings
         description: "Describe the standings for each driver at each race"
 
-      - name: stg_drivers
+      - name: drivers
         description: "Contains information about each driver"
 
-      - name: stg_lap_times
+      - name: lap_times
         description: "Contains information about each lap time at each race"
 
-      - name: stg_races
+      - name: races
         description: "Contains information about each race"
 
-      - name: stg_results
+      - name: results
         description: "Describes results at each race"
 
-      - name: stg_seasons
+      - name: seasons
         description: "Contains information about each season"
 
-      - name: stg_sprint_results
+      - name: sprint_results
         description: "Describes results for each sprint race"
 
-      - name: stg_status
+      - name: status
         description: "Contains information about each status (reasons why a drive did not finish its race)"
 
-      - name: stg_pit_stops
+      - name: pit_stops
         description: "Contains information about each pit stop for each race"
 
-      - name: stg_qualifying
+      - name: qualifying
         description: "Contains information about each qualifying session"

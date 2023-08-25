@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: staging_qualifying
+  - name: stg_qualifyings
     columns:
       - name: id_qualifying
         description: "Qualifying ID as string"

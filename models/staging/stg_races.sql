@@ -1,5 +1,4 @@
 {{ config(
-    materialized='table',
     cluster_by = "id_race",
 ) }}
 
@@ -16,5 +15,4 @@ SELECT
     , CASE WHEN CAST(fp1_date AS STRING) LIKE '%N' THEN NULL ELSE fp1_date END AS fp1_date
     , CASE WHEN CAST(fp2_date AS STRING) LIKE '%N' THEN NULL ELSE fp2_date END AS fp2_date
     , CASE WHEN CAST(fp3_date AS STRING) LIKE '%N' THEN NULL ELSE fp3_date END AS fp3_date
-FROM
-    `formula-1-391319.Formula1.races`
+FROM {{ source('Formula1','races') }}
