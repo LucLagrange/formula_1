@@ -1,5 +1,4 @@
 {{ config(
-    materialized='table',
     cluster_by = "id_result",
 ) }}
 
@@ -19,5 +18,4 @@ SELECT
     , CASE WHEN fastestlapspeed LIKE '%N' THEN NULL ELSE fastestlapspeed END AS fastest_lap_speed
     , CASE WHEN milliseconds LIKE '%N' THEN NULL ELSE milliseconds END AS total_milliseconds_elapsed
     , cast(statusid AS STRING) AS id_status
-FROM
-    `formula-1-391319.Formula1.results`
+FROM {{ source('Formula1','results') }}

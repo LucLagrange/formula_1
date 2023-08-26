@@ -32,8 +32,8 @@ clean-targets: # directories to be removed by `dbt clean`
 models:
   formula1:
     staging:
-      materialized: table
+      materialized: 'view'
       +dataset: staging
     dwh:
-      materialized: table
+      materialized: 'table'
       +dataset: dwh

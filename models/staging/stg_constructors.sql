@@ -1,5 +1,4 @@
 {{ config(
-    materialized='table',
     cluster_by = "id_constructor",
 ) }}
 
@@ -8,5 +7,4 @@ SELECT
     , name AS constructor_name
     , nationality
     , CAST(constructorid AS STRING) AS id_constructor
-FROM
-    `formula-1-391319.Formula1.constructors`
+FROM {{ source('Formula1','constructors') }}

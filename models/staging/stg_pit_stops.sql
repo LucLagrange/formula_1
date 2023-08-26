@@ -1,5 +1,4 @@
 {{ config(
-    materialized='table',
     cluster_by = "id_race",
 ) }}
 
@@ -11,5 +10,4 @@ SELECT
     , milliseconds AS pit_stop_duration_milliseconds
     , CAST(raceid AS STRING) AS id_race
     , CAST(driverid AS STRING) AS id_driver
-FROM
-    `formula-1-391319.Formula1.pit_stops`
+FROM {{ source('Formula1','pit_stops') }}

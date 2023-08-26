@@ -1,5 +1,4 @@
 {{ config(
-    materialized='table',
     cluster_by = "id_circuit",
 ) }}
 
@@ -12,4 +11,4 @@ SELECT
     , lat AS lattitude
     , lng AS longitude
     , CASE WHEN alt LIKE '%N' THEN NULL ELSE alt END AS altitude
-FROM `formula-1-391319.Formula1.circuits`
+FROM {{ source('Formula1','circuits') }}

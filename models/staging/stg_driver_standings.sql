@@ -1,5 +1,4 @@
 {{ config(
-    materialized='table',
     cluster_by = "id_driver_standing",
 ) }}
 
@@ -10,5 +9,4 @@ CAST(driverStandingsId AS STRING) AS id_driver_standing
 , points AS points_gained
 , position AS end_position
 , wins AS wins_number
-FROM
-`formula-1-391319.Formula1.driver_standings`
+FROM {{ source('Formula1','driver_standings') }}
