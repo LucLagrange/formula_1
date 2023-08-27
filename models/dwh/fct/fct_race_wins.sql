@@ -7,9 +7,9 @@ SELECT
     , ra.season_year
     , ROW_NUMBER()
         OVER (PARTITION BY ra.id_circuit ORDER BY ra.season_year DESC)
-        AS victory_order
+        AS victory_order_circuit
 FROM
-    `Formula1_staging.stg_results` AS re
+    {{ref('stg_results')}} AS re
 LEFT JOIN
     {{ ref('stg_races') }} AS ra
     ON

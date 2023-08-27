@@ -15,7 +15,7 @@ WITH nb_races AS (
         , driver_name
     FROM
         {{ ref('fct_race_wins') }}
-    WHERE victory_order = 1
+    WHERE victory_order_circuit = 1
 )
 
 , distinct_winners AS (

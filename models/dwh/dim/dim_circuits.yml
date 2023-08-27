@@ -30,6 +30,8 @@ models:
         description: The year of the oldest race held at the circuit.
       - name: latest_race_year
         description: The year of the latest race held at the circuit.
+      - name: distinct_winners
+        description: The number of distinct pilots who won on the circuit
       - name: nb_years_on_calendar
         description: The number of years the circuit has been on the calendar.
       - name: last_winner
