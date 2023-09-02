@@ -8,4 +8,4 @@ SELECT
     , CAST(constructorid AS STRING) AS id_constructor
     , CAST(raceid AS STRING) AS id_race
     , COALESCE (status = 'D', FALSE) AS bl_disqualified
-FROM {{ source('Formula1','constructor_results') }}
+FROM {{ source('Source_files','constructor_results') }}

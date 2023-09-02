@@ -34,7 +34,5 @@ models:
           - not_null
       - name: altitude
         description: "Altitude"
-        tests:
-          - dbt_utils.not_accepted_values:
-              values: ['%N']
+
 

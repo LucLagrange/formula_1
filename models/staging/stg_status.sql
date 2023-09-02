@@ -5,4 +5,4 @@
 SELECT
     cast(statusid AS STRING) AS id_status
     , status
-FROM {{ source('Formula1','status') }}
+FROM {{ source('Source_files','status') }}

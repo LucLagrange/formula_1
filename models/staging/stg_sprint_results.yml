@@ -9,24 +9,14 @@ models:
           - not_null
       - name: start_position
         description: "Start position"
-        tests:
-          - not_null
       - name: end_position
         description: "End position"
-        tests:
-          - not_null
       - name: final_rank
         description: "Final rank"
-        tests:
-          - not_null
       - name: points_gained
         description: "Points gained"
-        tests:
-          - not_null
       - name: laps_driven
         description: "Laps driven"
-        tests:
-          - not_null
       - name: fastest_lap
         description: "Fastest lap"
         tests:

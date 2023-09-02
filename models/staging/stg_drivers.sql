@@ -10,4 +10,4 @@ SELECT
     , surname AS last_name
     , nationality
     , cast(dob AS date) AS birth_date
-FROM {{ source('Formula1','drivers') }}
+FROM {{ source('Source_files','drivers') }}

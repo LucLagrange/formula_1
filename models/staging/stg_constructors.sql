@@ -7,4 +7,4 @@ SELECT
     , name AS constructor_name
     , nationality
     , CAST(constructorid AS STRING) AS id_constructor
-FROM {{ source('Formula1','constructors') }}
+FROM {{ source('Source_files','constructors') }}

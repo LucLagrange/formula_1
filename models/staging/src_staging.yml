@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: Formula1
+  - name: Source_files
     database: formula-1-391319
     description: "This is a replica -minus some useless columns- of the source CSV files"
     tables:
