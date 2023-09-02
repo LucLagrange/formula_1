@@ -18,4 +18,4 @@ SELECT
     , CASE WHEN fastestlapspeed LIKE '%N' THEN NULL ELSE fastestlapspeed END AS fastest_lap_speed
     , CASE WHEN milliseconds LIKE '%N' THEN NULL ELSE milliseconds END AS total_milliseconds_elapsed
     , cast(statusid AS STRING) AS id_status
-FROM {{ source('Formula1','results') }}
+FROM {{ source('Source_files','results') }}

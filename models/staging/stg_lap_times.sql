@@ -9,4 +9,4 @@ SELECT
   , position AS current_position 
   , time AS lap_time
   , milliseconds AS lap_time_milliseconds
-FROM {{ source('Formula1','lap_times') }}
+FROM {{ source('Source_files','lap_times') }}

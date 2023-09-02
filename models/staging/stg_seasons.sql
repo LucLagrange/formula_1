@@ -5,4 +5,4 @@
 SELECT
     url AS wikipedia_url
     , CAST(`year` AS STRING) AS season_year
-FROM {{ source('Formula1','seasons') }}
+FROM {{ source('Source_files','seasons') }}

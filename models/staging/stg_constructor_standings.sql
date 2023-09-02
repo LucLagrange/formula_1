@@ -9,4 +9,4 @@ SELECT
   , points AS points_gained
   , position AS end_position
   , wins AS wins_number
-FROM {{ source('Formula1','constructor_standings') }}
+FROM {{ source('Source_files','constructor_standings') }}

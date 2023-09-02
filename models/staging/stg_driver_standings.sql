@@ -9,4 +9,4 @@ CAST(driverStandingsId AS STRING) AS id_driver_standing
 , points AS points_gained
 , position AS end_position
 , wins AS wins_number
-FROM {{ source('Formula1','driver_standings') }}
+FROM {{ source('Source_files','driver_standings') }}

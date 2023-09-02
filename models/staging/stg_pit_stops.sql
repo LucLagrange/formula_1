@@ -10,4 +10,4 @@ SELECT
     , milliseconds AS pit_stop_duration_milliseconds
     , CAST(raceid AS STRING) AS id_race
     , CAST(driverid AS STRING) AS id_driver
-FROM {{ source('Formula1','pit_stops') }}
+FROM {{ source('Source_files','pit_stops') }}

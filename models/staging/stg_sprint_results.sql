@@ -17,4 +17,4 @@ SELECT
     , CAST(driverid AS STRING) AS id_driver
     , CAST(constructorid AS STRING) AS id_constructor
     , CAST(statusid AS STRING) AS id_status
-FROM {{ source('Formula1','sprint_results') }}
+FROM {{ source('Source_files','sprint_results') }}

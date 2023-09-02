@@ -11,4 +11,4 @@ SELECT
     , lat AS lattitude
     , lng AS longitude
     , CASE WHEN alt LIKE '%N' THEN NULL ELSE alt END AS altitude
-FROM {{ source('Formula1','circuits') }}
+FROM {{ source('Source_files','circuits') }}
