@@ -10,5 +10,5 @@ SELECT
     , country AS circuit_country
     , lat AS lattitude
     , lng AS longitude
-    , CASE WHEN alt LIKE '%N' THEN NULL ELSE alt END AS altitude
+    , SAFE_CAST(alt AS INT) AS altitude
 FROM {{ source('Source_files','circuits') }}

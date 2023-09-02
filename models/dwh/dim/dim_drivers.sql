@@ -25,7 +25,7 @@ year AS (
     FROM
         {{ ref('stg_results') }}
     WHERE
-        final_rank = '1'
+        final_rank = 1
     GROUP BY
         1
 )
@@ -37,7 +37,7 @@ year AS (
     FROM
         {{ ref('stg_results') }}
     WHERE
-        final_rank IN ('1', '2', '3')
+        final_rank IN (1, 2, 3)
     GROUP BY
         1
 )

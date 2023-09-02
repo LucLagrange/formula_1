@@ -6,7 +6,7 @@
 SELECT
     cast(raceid AS STRING) AS id_race
     , CAST(year AS STRING) AS season_year
-    , CAST(round AS STRING) AS season_round
+    , SAFE_CAST(round AS INT) AS season_round
     , cast(circuitid AS STRING) AS id_circuit
     , name AS race_name
     , CASE WHEN CAST(date AS STRING) LIKE '%N' THEN NULL ELSE date END AS race_date

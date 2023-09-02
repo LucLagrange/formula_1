@@ -19,4 +19,4 @@ LEFT JOIN
     ON
         re.id_driver = d.id_driver
 WHERE
-    final_rank = '1'
+    final_rank = 1

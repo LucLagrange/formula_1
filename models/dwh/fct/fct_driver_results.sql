@@ -2,9 +2,9 @@ SELECT
     re.id_result
     , re.id_race
     , re.id_driver
+    , ra.id_circuit
     , re.final_rank
     , d.driver_name
-    , ra.id_circuit
     , ra.season_year
     , ra.season_round
 FROM

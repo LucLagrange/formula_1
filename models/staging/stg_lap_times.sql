@@ -5,8 +5,8 @@
 SELECT
   CAST(raceid AS STRING) AS id_race
   , CAST(driverid AS STRING) AS id_driver
-  , lap 
-  , position AS current_position 
+  , SAFE_CAST(lap AS INT) AS lap 
+  , SAFE_CAST(position AS INT) AS current_position 
   , time AS lap_time
-  , milliseconds AS lap_time_milliseconds
+  , SAFE_CAST(milliseconds AS INT) AS lap_time_milliseconds
 FROM {{ source('Source_files','lap_times') }}
