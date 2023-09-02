@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: fct_driver_results
+    description: |
+      Results for each driver on each season round
+    columns:
+      - name: id_result
+        description: The unique identifier of each result
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_results')
+              field: id_result
+      - name: id_race
+        description: The identifier for each race
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_races')
+              field: id_race
+      - name: id_driver
+        description: The identifier for each driver
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_drivers')
+              field: id_driver
+      - name: id_circuit
+        description: The identifier for each circuit
+        tests:
+          - not_null
+      - name: driver_name
+        description: The name of the driver involved
+      - name: season_year
+        description: The season during which the result took place
+      - name: season_round
+        description: The round of the season during which the result took place
+
